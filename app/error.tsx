@@ -39,7 +39,7 @@ export default function Error({
                 <mark style={{padding: '1px 5px'}}>BROKE</mark>
             </Typography> my app !
             </Typography>
-            <Typography component="p" sx={{mt: 3}} variant="h4" fontWeight='bold'>Just kidding, It's my fault, I'm too
+            <Typography component="p" sx={{mt: 3}} variant="h4" fontWeight='bold'>Just kidding, {"It's my fault, I'm too"}
                 bad
                 🙄</Typography>
             <Box component="div" sx={{mt: 5, display: 'flex', flexFlow: 'column', gap: 1}}>
