@@ -7,7 +7,6 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import {MessagesProvider} from "@/libs/context/MessagesContext";
-import {ThemeCtxProvider} from "@/libs/context/ThemeContext";
 import MessagesList from "@/app/components/Messages/MessagesList";
 import NavBar from "@/app/components/NavBar/NavBar";
 import ThemeWrapper from "@/app/components/Theme/ThemeWrapper/ThemeWrapper";
@@ -31,19 +30,17 @@ export default function RootLayout({
         <html lang="en">
         <body className={inter.className}>
         <AppRouterCacheProvider>
-            <ThemeCtxProvider>
-                <ThemeWrapper>
-                    <MessagesProvider>
-                        <Box component="div" sx={{display: 'flex', flexFlow: 'column', height: '100vh'}}>
-                            <NavBar/>
-                            <Box sx={{flex: 1}}>
-                                <MessagesList/>
-                                {children}
-                            </Box>
+            <ThemeWrapper>
+                <MessagesProvider>
+                    <Box component="div" sx={{display: 'flex', flexFlow: 'column', height: '100vh'}}>
+                        <NavBar/>
+                        <Box sx={{flex: 1}}>
+                            <MessagesList/>
+                            {children}
                         </Box>
-                    </MessagesProvider>
-                </ThemeWrapper>
-            </ThemeCtxProvider>
+                    </Box>
+                </MessagesProvider>
+            </ThemeWrapper>
         </AppRouterCacheProvider>
         </body>
         </html>
