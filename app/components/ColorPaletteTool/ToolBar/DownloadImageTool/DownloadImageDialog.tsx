@@ -92,7 +92,7 @@ export default function DownloadImageDialog({onClose, show, onValidate}: Downloa
 
     return (
         <Dialog onClose={closeDialog} open={show} fullScreen={fullScreen} sx={{
-            maxHeight: '80svh',
+            maxHeight: '100svh',
         }}>
             <DialogTitle>Upload an image to generate colors</DialogTitle>
             <DialogContent>

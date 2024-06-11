@@ -19,7 +19,7 @@ export default function ImageDialogPreview({colors, image}: ImagePreviewProps) {
                  width={'100%'} height={'auto'} style={{
                 width: '100%',
                 height: 'auto',
-                maxHeight: '100%',
+                maxHeight: 'calc(100% - 60px)',
                 objectFit: 'contain',
             }}/>
             <Box component="div"
