@@ -18,9 +18,11 @@ export default function ImageDialogPreview({colors, image}: ImagePreviewProps) {
             <img src={image} alt={"Your image"}
                  width={'100%'} height={'auto'} style={{
                 width: '100%',
-                height: 'auto',
-                maxHeight: 'calc(100% - 60px)',
+                height: 400,
                 objectFit: 'contain',
+                border: '1px solid rgba(0,0,0,0.05)',
+                borderRadius: 10,
+                backgroundColor: 'rgba(0,0,0,0.05)',
             }}/>
             <Box component="div"
                  sx={{display: 'flex', mt: 2, borderRadius: '10px', overflow: 'hidden'}}>
