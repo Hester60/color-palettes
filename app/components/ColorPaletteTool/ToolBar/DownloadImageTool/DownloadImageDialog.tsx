@@ -2,7 +2,16 @@
 
 import {useCallback, useState} from 'react';
 import {useDropzone} from 'react-dropzone';
-import {Dialog, DialogTitle, DialogContent, Typography, CircularProgress, Box, Button} from "@mui/material";
+import {
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    Typography,
+    CircularProgress,
+    Box,
+    Button,
+    useMediaQuery, useTheme
+} from "@mui/material";
 import {useMessages} from "@/libs/context/MessagesContext";
 import {extractColors} from 'extract-colors'
 import {FinalColor} from "extract-colors/lib/types/Color";
@@ -22,6 +31,8 @@ export default function DownloadImageDialog({onClose, show, onValidate}: Downloa
     const [colors, setColors] = useState<FinalColor[]>([]);
     const [base64, setBase64] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     const onDrop = useCallback((acceptedFiles: File[]) => {
         setBase64(null);
@@ -80,7 +91,7 @@ export default function DownloadImageDialog({onClose, show, onValidate}: Downloa
     }
 
     return (
-        <Dialog onClose={closeDialog} open={show}>
+        <Dialog onClose={closeDialog} open={show} fullScreen={fullScreen}>
             <DialogTitle>Upload an image to generate colors</DialogTitle>
             <DialogContent>
                 {(colors.length <= 0) && (
