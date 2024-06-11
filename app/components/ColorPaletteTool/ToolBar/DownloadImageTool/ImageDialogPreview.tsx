@@ -14,9 +14,15 @@ export default function ImageDialogPreview({colors, image}: ImagePreviewProps) {
             width: isBelow1000Pixels ? '100%' : 500,
             display: 'flex',
             flexFlow: 'column',
+            maxHeight: '80svh',
         }}>
             <img src={image} alt={"Your image"}
-                 width={'100%'} height={'auto'}/>
+                 width={'100%'} height={'auto'} style={{
+                width: '100%',
+                height: 'auto',
+                maxHeight: '100%',
+                objectFit: 'contain',
+            }}/>
             <Box component="div"
                  sx={{display: 'flex', mt: 2, borderRadius: '10px', overflow: 'hidden'}}>
                 {colors.map((color: FinalColor) => (
