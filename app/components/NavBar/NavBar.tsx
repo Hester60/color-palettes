@@ -17,13 +17,13 @@ export default function NavBar(): JSX.Element {
                         CoOOOoleurs
                     </Typography>
                     <Box component="div" sx={{display: 'flex', alignItems: 'center', gap: 1}}>
-                        <Link href={process.env.NEXT_PUBLIC_LINKEDIN_PROFIL_URL as string}>
+                        <Link target="_blank" href={process.env.NEXT_PUBLIC_LINKEDIN_PROFIL_URL as string}>
                             <IconButton aria-label="LinkedIn URL" color="primary"
                                         sx={{borderRadius: '10px'}}>
                                 <LinkedIn/>
                             </IconButton>
                         </Link>
-                        <Link href={process.env.NEXT_PUBLIC_SOURCE_CODE_URL as string}>
+                        <Link target="_blank" href={process.env.NEXT_PUBLIC_SOURCE_CODE_URL as string}>
                             <IconButton aria-label="GitHub URL" color="secondary"
                                         sx={{borderRadius: '10px'}}>
                                 <GitHub/>
