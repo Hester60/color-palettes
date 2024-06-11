@@ -41,20 +41,26 @@ export default function ColorPaletteToolBar({
                 boxSizing: 'border-box',
                 boxShadow: 0,
                 padding: '0 8px',
-                justifyContent: 'start',
+                justifyContent: 'space-between',
                 gap: '10px',
                 height: '65px',
             },
         }}>
-            <GenerateButton onClick={generateRandomPalette}/>
-            <Divider orientation="vertical" flexItem sx={{height: '50%', alignSelf: 'center'}}/>
-            <PickColorButton onClick={onPickColorClick}/>
-            <Divider orientation="vertical" flexItem sx={{height: '50%', alignSelf: 'center'}}/>
-            <ExportButton onClick={onExportClick}/>
-            <UploadPictureButton onClick={onUploadPictureClick}/>
-            <Divider orientation="vertical" flexItem sx={{height: '50%', alignSelf: 'center'}}/>
-            <HistoryNavigation onNextHistory={onNextHistory} onBackHistory={onBackHistory} canBack={canBackHistory}
-                               canNext={canNextHistory}/>
+            <Box component="div"
+                 sx={{display: 'flex', flexFlow: 'row', alignItems: 'center', gap: '10px', height: '100%'}}>
+                <GenerateButton onClick={generateRandomPalette}/>
+                <Divider orientation="vertical" flexItem sx={{height: '50%', alignSelf: 'center'}}/>
+                <PickColorButton onClick={onPickColorClick}/>
+            </Box>
+            <Box component="div"
+                 sx={{display: 'flex', flexFlow: 'row', alignItems: 'center', gap: '10px', height: '100%'}}>
+                <Divider orientation="vertical" flexItem sx={{height: '50%', alignSelf: 'center'}}/>
+                <ExportButton onClick={onExportClick}/>
+                <UploadPictureButton onClick={onUploadPictureClick}/>
+                <Divider orientation="vertical" flexItem sx={{height: '50%', alignSelf: 'center'}}/>
+                <HistoryNavigation onNextHistory={onNextHistory} onBackHistory={onBackHistory} canBack={canBackHistory}
+                                   canNext={canNextHistory}/>
+            </Box>
         </Box>
     );
 }

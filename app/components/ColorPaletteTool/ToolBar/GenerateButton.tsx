@@ -11,7 +11,7 @@ export default function GenerateButton({onClick}: GenerateButtonProps) {
     return (
         <Button
             onClick={onClick}
-            size={isBelow1000Pixels ? 'small' : 'medium'}
+            size="small"
             variant="contained"
             color="secondary"
             disableElevation={true}

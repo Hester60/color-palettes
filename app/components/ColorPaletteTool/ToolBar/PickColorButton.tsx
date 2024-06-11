@@ -11,7 +11,7 @@ export default function PickColorButton({onClick}: PickColorButtonProps) {
     return (
         <Button
             onClick={onClick}
-            size={isBelow1000Pixels ? 'small' : 'medium'}
+            size="small"
             variant="contained"
             color="primary"
             disableElevation={true}
