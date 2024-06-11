@@ -14,7 +14,6 @@ export default function ImageDialogPreview({colors, image}: ImagePreviewProps) {
             width: isBelow1000Pixels ? '100%' : 500,
             display: 'flex',
             flexFlow: 'column',
-            maxHeight: '80svh',
         }}>
             <img src={image} alt={"Your image"}
                  width={'100%'} height={'auto'} style={{

@@ -1,7 +1,7 @@
 'use client';
 
 import {IconButton, Tooltip, useMediaQuery} from "@mui/material";
-import {CameraAlt} from "@mui/icons-material";
+import {CameraAltOutlined} from "@mui/icons-material";
 
 type UploadPictureButtonProps = {
     onClick: { (): void };
@@ -14,7 +14,7 @@ export default function UploadPictureButton({onClick}: UploadPictureButtonProps)
         <Tooltip title="Extract colors from image" placement="right" arrow={true}>
             <IconButton size={isBelow1000Pixels ? 'small' : 'medium'} aria-label="Extract colors from image" onClick={onClick}
                         sx={{borderRadius: '10px'}}>
-                <CameraAlt fontSize={isBelow1000Pixels ? 'small' : 'medium'}/>
+                <CameraAltOutlined fontSize={isBelow1000Pixels ? 'small' : 'medium'}/>
             </IconButton>
         </Tooltip>
     )
