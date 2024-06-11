@@ -56,6 +56,7 @@ export default function ColorPaletteItem({
         '-webkit-user-select': 'none',
         '-ms-user-select': 'none',
         'user-select': 'none',
+        touchAction: 'none',
         '@media (max-width: 1000px)': {
             width: '100%',
             flexFlow: 'row-reverse',
