@@ -32,7 +32,7 @@ export default function RootLayout({
         <AppRouterCacheProvider>
             <ThemeWrapper>
                 <MessagesProvider>
-                    <Box component="div" sx={{display: 'flex', flexFlow: 'column', height: '100vh'}}>
+                    <Box component="div" sx={{display: 'flex', flexFlow: 'column', height: '100svh'}}>
                         <NavBar/>
                         <Box sx={{flex: 1}}>
                             <MessagesList/>
