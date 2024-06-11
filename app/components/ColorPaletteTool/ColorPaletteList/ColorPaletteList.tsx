@@ -21,7 +21,6 @@ export default function ColorPaletteList({
             <Box component="div"
                  sx={{
                      height: '100%',
-                     minHeight: '100%',
                      display: 'flex',
                      flexDirection: 'row',
                      '@media (max-width: 1000px)': {
