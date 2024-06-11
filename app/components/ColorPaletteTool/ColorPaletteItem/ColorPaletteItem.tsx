@@ -52,6 +52,10 @@ export default function ColorPaletteItem({
         cursor: 'grab',
         zIndex: isDragging ? 1 : 'auto',
         boxShadow: `${color.hex} 0px 0px 0px 1px`,
+        '-webkit-touch-callout': "none",
+        '-webkit-user-select': 'none',
+        '-ms-user-select': 'none',
+        'user-select': 'none',
         '@media (max-width: 1000px)': {
             width: '100%',
             flexFlow: 'row-reverse',
@@ -132,23 +136,23 @@ export default function ColorPaletteItem({
                     </SortableContext>
                 )
             }
-                {
-                    (showShades && !isBelow1000Pixels && color.shades?.length) && (
-                        <Box
-                            component="div"
-                            sx={style}
-                            onMouseLeave={() => {
-                                setShowShades(false);
-                                setShowButtons(false);
-                            }}
-                        >
-                            {color.shades!.map((shade: Color) => (
-                                <ColorPaletteShadeItem key={shade.hex} onShadeClick={selectedNewShade} shade={shade}
-                                                       color={color}/>
-                            ))}
-                        </Box>
-                    )
-                }
+            {
+                (showShades && !isBelow1000Pixels && color.shades?.length) && (
+                    <Box
+                        component="div"
+                        sx={style}
+                        onMouseLeave={() => {
+                            setShowShades(false);
+                            setShowButtons(false);
+                        }}
+                    >
+                        {color.shades!.map((shade: Color) => (
+                            <ColorPaletteShadeItem key={shade.hex} onShadeClick={selectedNewShade} shade={shade}
+                                                   color={color}/>
+                        ))}
+                    </Box>
+                )
+            }
         </>
     );
 }
